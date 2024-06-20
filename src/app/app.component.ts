@@ -6,11 +6,28 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <header>
+      <img src="logo.png" alt="Angular Logo" />
+    </header>
 
     <router-outlet />
   `,
-  styles: [],
+  styles: [
+    `
+      header {
+        display: flex;
+        align-items: center;
+        background-color: #14141A;
+        color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      img {
+        height: 24px;
+      }
+    `,
+  ],
 })
 export class AppComponent {
   title = 'angular-test';

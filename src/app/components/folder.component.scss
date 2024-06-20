@@ -1,6 +1,7 @@
     @import '../../variables.scss';
 
     .folder-card {
+      width: 408px;
       position: relative;
       display: flex;
       align-items: center;
@@ -8,7 +9,6 @@
       background-color: $card-background;
       border-radius: $border-radius;
       padding: 16px;
-      width: 204px;
       color: $card-text-color;
       box-shadow: $box-shadow;
       font-family: $font-family;
@@ -20,6 +20,12 @@
       .folder-details {
         flex-grow: 1;
         padding-left: 12px;
+
+        section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
 
         .folder-title {
           font-size: 18px;

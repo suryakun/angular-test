@@ -7,12 +7,14 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <div class="folder-card">
-      <img [src]="imagePath" alt="Folder icon" class="folder-icon" />
       <div class="folder-details">
+        <section>
+          <img [src]="imagePath" alt="Folder icon" class="folder-icon" />
+          <div class="menu-icon" (click)="toggleMenu()">&#8942;</div>
+        </section>
         <h2 class="folder-title">TVC Raw Uploads</h2>
         <p class="folder-info">Shared folder • 1.2 GB</p>
       </div>
-      <div class="menu-icon" (click)="toggleMenu()">&#8942;</div>
       <div class="menu" id="overflow-menu" *ngIf="showMenu">
         <div class="menu-item">
           <span class="menu-icon">&#128214;</span> 

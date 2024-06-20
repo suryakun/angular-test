@@ -1,0 +1,27 @@
+<div class="video-card">
+  <div class="video-thumbnail">
+    <img src="image.png" alt="Video Thumbnail">
+    <div class="video-duration">01:30</div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      &#x22EE;
+    </div>
+    <div class="menu" *ngIf="menuOpen">
+      <div class="menu-item">
+        <img src="share.svg" alt="Share" />
+        <span>Share</span>
+      </div>
+      <div class="menu-item">
+        <img src="edit.svg" alt="Edit" />
+        <span>Edit</span>
+      </div>
+      <div class="menu-item">
+        <img src="delete.svg" alt="Delete" />
+        <span>Delete</span>
+      </div>
+    </div>
+  </div>
+  <div class="video-details">
+    <div class="video-title">Alien vs Predator 283MB</div>
+    <div class="video-author">Harry Smith</div>
+  </div>
+</div>
