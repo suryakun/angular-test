@@ -1,0 +1,73 @@
+    @import '../../variables.scss';
+
+    .folder-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $card-background;
+      border-radius: $border-radius;
+      padding: 16px;
+      width: 300px;
+      color: $card-text-color;
+      box-shadow: $box-shadow;
+      font-family: $font-family;
+
+      .folder-icon {
+        font-size: 36px;
+      }
+
+      .folder-details {
+        flex-grow: 1;
+        padding-left: 12px;
+
+        .folder-title {
+          font-size: 18px;
+          margin: 0;
+        }
+
+        .folder-info {
+          font-size: 14px;
+          color: $info-text-color;
+          margin: 4px 0 0 0;
+        }
+      }
+
+      .menu-icon {
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .menu {
+        position: absolute;
+        top: 45px; // Adjusted to align below the menu icon
+        right: 0;
+        background-color: $menu-background;
+        border-radius: $menu-border-radius;
+        box-shadow: $box-shadow;
+        z-index: 10;
+        padding: 10px 0;
+
+        .menu-item {
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          cursor: pointer;
+          color: $menu-text-color;
+
+          &:hover {
+            background-color: $menu-item-hover;
+          }
+
+          .menu-icon {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+        }
+
+        &.show {
+          display: block;
+        }
+      }
+    }
