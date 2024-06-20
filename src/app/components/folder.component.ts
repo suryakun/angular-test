@@ -15,15 +15,15 @@ import { CommonModule } from '@angular/common';
       <div class="menu-icon" (click)="toggleMenu()">&#8942;</div>
       <div class="menu" id="overflow-menu" *ngIf="showMenu">
         <div class="menu-item">
-          <span class="menu-icon">&#128214;</span> <!-- Unicode for share icon -->
+          <span class="menu-icon">&#128214;</span> 
           <span>Share</span>
         </div>
         <div class="menu-item">
-          <span class="menu-icon">&#9998;</span> <!-- Unicode for rename icon -->
+          <span class="menu-icon">&#9998;</span>
           <span>Rename</span>
         </div>
         <div class="menu-item">
-          <span class="menu-icon">&#128465;</span> <!-- Unicode for delete icon -->
+          <span class="menu-icon">&#128465;</span>
           <span>Delete</span>
         </div>
       </div>
@@ -36,7 +36,6 @@ export class FolderComponent {
   showMenu: boolean = false;
 
   toggleMenu() {
-    console.log('test')
     this.showMenu = !this.showMenu;
   }
 }

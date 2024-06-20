@@ -1,0 +1,56 @@
+@import '../../variables.scss';
+
+.button-container {
+    position: relative;
+    width: 100px;
+    color: $card-text-color;
+    font-family: $font-family;
+
+    .filter-icon {
+        cursor: pointer;
+        background-color: $card-background;
+        border-radius: $border-radius;
+        padding: 4px 8px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 80px;
+        img {
+            width: 18px;
+        }
+        span {
+            font-size: 15px;
+        }
+    }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    width: 200px;
+    position: absolute;
+    top: 38px;
+    right: 0;
+    background-color: $menu-background;
+    border-radius: $menu-border-radius;
+    box-shadow: $box-shadow;
+    z-index: 10;
+    padding: 10px 0;
+  
+    .menu-item {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 20px;
+      cursor: pointer;
+      color: $menu-text-color;
+  
+      &:hover {
+        background-color: $menu-item-hover;
+      }
+    }
+  }
+}
+  

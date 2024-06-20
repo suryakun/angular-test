@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
 import { FolderComponent } from '../components/folder.component';
+import { FilterComponent } from '../components/filter.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FolderComponent],
+  imports: [FolderComponent, FilterComponent],
   template: `
-    <div>
+    <div class="container">
       <app-folder></app-folder>
+      <app-filter></app-filter>
     </div>
   `,
-  styles: ``
+  styles: `
+    .container {
+      display: flex;
+    }
+  `
 })
 export class HomeComponent {
 
