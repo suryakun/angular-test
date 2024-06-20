@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Folder } from '../services/storage.service';
 
 @Component({
   selector: 'app-folder',
@@ -12,8 +13,8 @@ import { CommonModule } from '@angular/common';
           <img [src]="imagePath" alt="Folder icon" class="folder-icon" />
           <div class="menu-icon" (click)="toggleMenu()">&#8942;</div>
         </section>
-        <h2 class="folder-title">TVC Raw Uploads</h2>
-        <p class="folder-info">Shared folder • 1.2 GB</p>
+        <h2 class="folder-title">{{folder.name}}</h2>
+        <p class="folder-info">Shared folder • {{folder.size}}</p>
       </div>
       <div class="menu" id="overflow-menu" *ngIf="showMenu">
         <div class="menu-item">
@@ -34,6 +35,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./folder.component.scss']
 })
 export class FolderComponent {
+  @Input() folder!: Folder;
   public imagePath: string = 'folder.svg';
   showMenu: boolean = false;
 

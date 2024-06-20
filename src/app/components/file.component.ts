@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Storage } from '../services/storage.service';
 
 @Component({
   selector: 'app-file',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./file.component.scss']
 })
 export class FileComponent {
+  @Input() file!: Storage;
   menuOpen = false;
 
   toggleMenu() {
